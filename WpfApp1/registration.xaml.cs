@@ -30,7 +30,7 @@ namespace WpfApp1
             var pass = Password.Text;
             var email = Email.Text;
 
-            var role = "User";
+           
 
             var context = new AppDbContext();
 
@@ -40,13 +40,13 @@ namespace WpfApp1
                 Name.Text = "Такой пользователь уже существует!!!";
                 return;
             }
-            var user = new User() { Login = log, Password = pass, Email = email, Role = role };
+            var user = new User() { Login = log, Password = pass, Email = email};
             context.Users.Add(user);
             context.SaveChanges();
             Name.Text = "Вы успешно зарегистрировались!";
 
 
-            if (!CheckLoginRepeat(user)) //проверка логина на повторение в файле
+            if (!CheckLoginRepeat(user)) 
             {
                 Name.Text = "Такой пользователь уже существует";
                 return;
@@ -70,16 +70,15 @@ namespace WpfApp1
 
             Name.Text = ("Вы успешно создали нового пользователя");
         }
-        private bool CheckLoginRepeat(User user) //метод для проверки логина пользователя
+        private bool CheckLoginRepeat(User user) 
         {
 
-            var users = new List<User>(); //создаем лист(массив) с пользователями
+            var users = new List<User>(); 
 
             {
 
             }
-            return users.FirstOrDefault(u => u.Login == user.Login) is null; //сравниваем введенные данные в текстовое полеи значения в листе
-                                                                             //при первом нахождении возвращаем ошибку
+            return users.FirstOrDefault(u => u.Login == user.Login) is null; 
         }
         
         public int x = 1;
