@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="registration" Height="450" Width="800" FontFamily="Times New Roman">
+    <Grid Background="AntiqueWhite">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="5" Grid.Row="0" Content="Назад" Click="Button_Click" FontSize="26"/>
+        <TextBlock Text="Регистрация" Grid.ColumnSpan="2" FontSize="35" Height="50" TextAlignment="Center"  Grid.Column="1"/>
+        <TextBlock Name="login" Grid.Row="1" Text="Введите логин:" FontSize="26" Height="35" TextAlignment="Center" Grid.ColumnSpan="2" Margin="185,10,15,10"/>
+        <TextBlock Name="password" Grid.Row="3" Text="Введите пароль:" FontSize="26" Height="35" TextAlignment="Center" Grid.ColumnSpan="2" Margin="193,9,7,10"/>
+        <TextBox Name="Login" Grid.Row="1" Height="40" Grid.Column="2" Grid.ColumnSpan="2" FontSize="35" Background="WhiteSmoke" Width="400" TextAlignment="Left" />
+        <TextBox Name="Email" Grid.Row="2" Height="40" Grid.Column="2" Grid.ColumnSpan="2" FontSize="35" Background="WhiteSmoke" Width="400" TextAlignment="Left"/>
+        <TextBox Name="Password" Grid.Row="3" Height="40" Grid.Column="2" FontSize="35" Background="WhiteSmoke" TextAlignment="Left" Margin="0,8,45,14" Grid.ColumnSpan="2"/>
+        <Button  Width="395" Click="reg" Name="registr" Grid.Column="1" Grid.ColumnSpan="2" FontSize="30" Grid.Row="7" Content="Регистрация"/>
+        
+        <TextBlock Name="Passwordnew" Grid.Row="4" Grid.Column="1" Text="Подтвердите пароль:" FontSize="22" Height="35" TextAlignment="Center"/>
+        <TextBox Background="WhiteSmoke"  Name="loginnew" Grid.Row="4" Height="40" Grid.Column="2" Grid.ColumnSpan="2" FontSize="35"  Width="400" TextAlignment="Left"/>
+        <TextBox Background="WhiteSmoke" Name="Name" Grid.Row="5" Height="40" Grid.Column="1" Grid.ColumnSpan="3" FontSize="35" TextAlignment="Left"/>
+        <TextBlock Name="Role"/>
+        <TextBlock Name="emailtest" Grid.Row="2" Text="Введите email:" FontSize="26" Height="35" TextAlignment="Center" Grid.ColumnSpan="2" Margin="185,9,15,10"/>
+        <PasswordBox  x:Name="passwordPasswordBox"   Grid.Row="3" Grid.Column="2" FontSize="35" Background="WhiteSmoke" Margin="0,8,45,14" Grid.ColumnSpan="2" />
+        <Button Name="knopka" Click="knopka_Click" Content="👁" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Background="LightSteelBlue" HorizontalAlignment="Left"  Height="29" Width="30" RenderTransformOrigin="-0.033,0.588" Margin="160,14,0,0" VerticalAlignment="Top" Grid.Column="3" Grid.Row="3"/>
+        <TextBlock Text="Примечание:" Grid.Column="0" Grid.Row="5" FontSize="26" Height="35" TextAlignment="Center" />
+    </Grid>
+</Window>
